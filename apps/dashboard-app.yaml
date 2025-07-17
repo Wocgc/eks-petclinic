@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: petclinic-efk
+  name: petclinic-dashboard
   namespace: argocd
 spec:
   project: default
