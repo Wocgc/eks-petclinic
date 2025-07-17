@@ -8,28 +8,6 @@
 Helm, Kustomize, Raw YAML을 조합하여 다양한 리소스를 배포하며, CI 파이프라인으로부터 전달받은 이미지 태그 변경도 자동 반영함함
 
 ---
-
-## 🧰 사용 기술
-
-- **Argo CD**
-- **Kustomize**
-- **Helm**
-- **Raw Kubernetes YAML**
-- **GitHub Actions** (GitOps 트리거 목적)
-## 🖼️ 아키텍처 구성도
-
-![architecture](docs/architecture.png)
-
-## 🧱 전체 기술 스택
-
-- IaC: Terraform
-- CI: GitHub Actions
-- CD: Argo CD (GitOps)
-- Container Registry: ECR
-- K8s Monitoring: Prometheus, Grafana
-- Logging: EFK
----
-
 ## 🗂️ 폴더 구조
 
 ```bash
@@ -46,6 +24,16 @@ eks-petclinic/
 ├── role/            # IAM Role 및 정책 JSON
 └── whatap/          # Whatap K8s Agent 설정
 ```
+
+## 🧰 사용 기술
+
+- **Argo CD**
+- **Kustomize**
+- **Helm**
+- **Raw Kubernetes YAML**
+- **GitHub Actions** (GitOps 트리거 목적)
+
+
 
 ---
 
@@ -78,6 +66,17 @@ eks-petclinic/
 🔗 https://github.com/Wocgc/petclinic-app
 → CI에서 이미지 빌드 및 이 레포의 kustomization.yaml 자동 커밋
 ```
+⚙️ 기술 스택
+CI/CD: GitHub Actions → 이미지 빌드 및 GitOps 트리거
 
+CD 툴: Argo CD (ApplicationSet 기반)
+
+K8s 인프라: AWS EKS, ALB Ingress, HPA, Cluster Autoscaler
+
+모니터링: Prometheus, Grafana
+
+로깅: EFK(Elasticsearch, Fluentd, Kibana)
+
+기타: Whatap, Dashboard, IAM Roles
 ---
 
