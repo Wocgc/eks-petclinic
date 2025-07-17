@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Wocgc/petclinic-eks.git
+    repoURL: https://github.com/Wocgc/eks-petclinic.git
     targetRevision: main
     path: ingress
   destination:
