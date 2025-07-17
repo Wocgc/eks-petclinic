@@ -1,5 +1,5 @@
 resources:
-  - all.yaml
+  - petclinic.yaml
   - app-app.yaml
   - web-app.yaml
   - ingress-app.yaml
