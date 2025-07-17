@@ -1,21 +1,2 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: petclinic-efk
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/Wocgc/eks-petclinic.git
-    targetRevision: HEAD
-    path: whatap
-    directory:
-      recurse: true
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: whatap-monitoring
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
-
+resources:
+  - whatap_kube_agent.yaml
