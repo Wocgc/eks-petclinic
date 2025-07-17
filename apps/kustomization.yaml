@@ -1,0 +1,7 @@
+resources:
+  - app-app.yaml
+  - web-app.yaml
+  - ingress-app.yaml
+  - hpa-app.yaml
+  - autoscaler-app.yaml
+  - monitoring-app.yaml

@@ -1,0 +1,32 @@
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 512Mi
+  limits:
+    cpu: 500m
+    memory: 1Gi
+
+# Elasticsearch 연결 정보
+elasticsearchHosts: "https://elasticsearch-master.logging.svc:9200"
+protocol: http
+server:
+  ssl:
+    enabled: false
+# Secret 기반 인증
+elasticsearch:
+  auth:
+    existingSecret: elasticsearch-credentials
+    existingSecretUsernameKey: username
+    existingSecretPasswordKey: password
+
+# Ingress 비활성화 (수동 구성 시)
+ingress:
+  enabled: false
+
+# Kibana 서비스
+service:
+  type: ClusterIP
+  port: 5601
+

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  data-access.properties: |
+    jdbc.driverClassName=com.mysql.cj.jdbc.Driver
+    jpa.showSql=true
+    jpa.database=MYSQL
+

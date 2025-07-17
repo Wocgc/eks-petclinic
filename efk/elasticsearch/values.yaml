@@ -1,0 +1,22 @@
+replicas: 3
+
+tls:
+  enabled: true
+  selfSignedCertificate:
+    enabled: true
+
+resources:
+  requests:
+    memory: 1Gi
+    cpu: 500m
+  limits:
+    memory: 2Gi
+    cpu: 1000m
+
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: gp2-csi
+  resources:
+    requests:
+      storage: 10Gi
+

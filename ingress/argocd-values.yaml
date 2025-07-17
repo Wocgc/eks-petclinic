@@ -1,0 +1,24 @@
+server:
+  ingress:
+    enabled: true
+    ingressClassName: alb
+    annotations:
+      external-dns.alpha.kubernetes.io/hostname: argo.cgclab.shop
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+      alb.ingress.kubernetes.io/backend-protocol: HTTP
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:560971842042:certificate/e0dde134-126b-4c75-a5a8-c61f9edf6b87
+      alb.ingress.kubernetes.io/ssl-redirect: '443'
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80, "HTTPS": 443}]'
+      alb.ingress.kubernetes.io/healthcheck-path: /healthz
+    hosts:
+      - argo.cgclab.shop
+    paths:
+      - /
+    pathType: Prefix
+    https: true
+  config:
+    params:
+      server.insecure: true   
+  extraArgs:
+    - --insecure

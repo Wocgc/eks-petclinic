@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  labels:
+    app: web-cgc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-cgc
+  template:
+    metadata:
+      labels:
+        app: web-cgc
+    spec:
+      containers:
+        - name: web-cgc
+          image: 560971842042.dkr.ecr.ap-northeast-2.amazonaws.com/wocgc:35117dc-web
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "512Mi"
+            limits:
+              cpu: "512m"
+              memory: "1Gi"

@@ -1,0 +1,18 @@
+# 민감 정보
+app/secret.yaml
+
+# 헬름 설치용 로컬 스크립트
+get_helm.sh
+
+# 임시 디렉토리
+cgc-eks-argocd/dd
+
+# 기타
+*.log
+*.swp
+
+iam-policy.json
+iam-policy.json
+
+*.jar
+petclinic.war

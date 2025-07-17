@@ -1,0 +1,17 @@
+cloudProvider: aws
+
+autoDiscovery:
+  clusterName: cgc-cluster   
+
+awsRegion: ap-northeast-2
+
+rbac:
+  serviceAccount:
+    create: false           
+    name: cluster-autoscaler 
+
+extraArgs:
+  expander: least-waste
+  balance-similar-node-groups: true
+  skip-nodes-with-system-pods: false
+  skip-nodes-with-local-storage: false

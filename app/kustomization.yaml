@@ -1,0 +1,10 @@
+resources:
+- configmap.yaml
+- deployment.yaml
+- service.yaml
+images:
+- name: 560971842042.dkr.ecr.ap-northeast-2.amazonaws.com/wocgc
+  newName: 560971842042.dkr.ecr.ap-northeast-2.amazonaws.com/wocgc
+  newTag: dae0ff0-app
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
