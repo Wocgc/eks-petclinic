@@ -1,4 +1,6 @@
 resources:
-  - ingress.yaml
+  - web-ingress.yaml
   - grafana-ingress.yaml
   - prometheus-ingress.yaml
+  - dashboard-ingress.yaml
+  - kibana-ingress.yaml
