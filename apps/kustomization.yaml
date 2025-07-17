@@ -6,3 +6,6 @@ resources:
   - hpa-app.yaml
   - autoscaler-app.yaml
   - monitoring-app.yaml
+  - dashboard-app.yaml       
+  - efk-app.yaml        
+  - whatap-app.yaml   
