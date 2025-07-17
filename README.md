@@ -66,7 +66,8 @@ eks-petclinic/
 🔗 https://github.com/Wocgc/petclinic-app
 → CI에서 이미지 빌드 및 이 레포의 kustomization.yaml 자동 커밋
 ```
-⚙️ 기술 스택
+
+## ⚙️ 기술 스택
 CI/CD: GitHub Actions → 이미지 빌드 및 GitOps 트리거
 
 CD 툴: Argo CD (ApplicationSet 기반)
@@ -78,5 +79,6 @@ K8s 인프라: AWS EKS, ALB Ingress, HPA, Cluster Autoscaler
 로깅: EFK(Elasticsearch, Fluentd, Kibana)
 
 기타: Whatap, Dashboard, IAM Roles
+
 ---
 
