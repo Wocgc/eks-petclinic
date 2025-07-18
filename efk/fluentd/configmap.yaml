@@ -71,7 +71,7 @@ data:
       logstash_prefix fluentd-error  # error 인덱스 구분
       logstash_dateformat %Y.%m.%d
       user elastic
-      password XYMhzdMYCAdgJXka
+      password pk3MxyQq050QJCJi
       reconnect_on_error true
       reload_connections true
       include_tag_key true
