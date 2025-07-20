@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Wocgc/eks-petclinic.git
-    targetRevision: HEAD
+    targetRevision: main
     path: dashboard
     directory:
       recurse: true
