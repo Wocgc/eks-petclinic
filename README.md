@@ -29,16 +29,18 @@
 └── .gitignore        # Git 무시 파일
 
 🧩 적용 기술 스택
-구성 요소	기술
-Kubernetes	Amazon EKS
-GitOps	Argo CD + Kustomize
-CI	GitHub Actions
-Ingress	ALB Ingress Controller + ExternalDNS
-Monitoring	Prometheus + Grafana
-Logging	Elasticsearch + Fluentd + Kibana
-Autoscaling	HPA + Cluster Autoscaler (IRSA)
-APM (옵션)	Whatap
-인증 및 보안	IRSA, RBAC, ACM, TLS
+| 구성 요소       | 기술                                   |
+| ----------- | ------------------------------------ |
+| Kubernetes  | Amazon EKS                           |
+| GitOps      | Argo CD + Kustomize                  |
+| CI          | GitHub Actions                       |
+| Ingress     | ALB Ingress Controller + ExternalDNS |
+| Monitoring  | Prometheus + Grafana                 |
+| Logging     | Elasticsearch + Fluentd + Kibana     |
+| Autoscaling | HPA + Cluster Autoscaler (IRSA)      |
+| APM (옵션)    | Whatap                               |
+| 인증 및 보안     | IRSA, RBAC, ACM, TLS                 |
+
 
 ✅ 특징 요약
 🔄 Git 변경사항 → Argo CD 자동 배포
