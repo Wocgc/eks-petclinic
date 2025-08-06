@@ -28,6 +28,7 @@
 ├── .argocdignore     # Argo CD 무시 대상 정의
 └── .gitignore        # Git 무시 파일
 
+```
 
 🧩 적용 기술 스택
 | 구성 요소       | 기술                                   |
@@ -42,7 +43,6 @@
 | APM (옵션)    | Whatap                               |
 | 인증 및 보안     | IRSA, RBAC, ACM, TLS                 |
 
-
 ✅ 특징 요약
 🔄 Git 변경사항 → Argo CD 자동 배포
 
@@ -53,3 +53,4 @@
 🔐 IAM Role for Service Account(IRSA) 기반 최소 권한 구성
 
 📈 실시간 모니터링 및 로그 수집까지 통합 관리
+
